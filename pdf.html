@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+  
+   <script>
+    window.onload = function () {
+        
+                const invoice = this.document.getElementById("invoice");
+                console.log(invoice);
+                console.log(window);
+                var opt = {
+                    margin: 1,
+                    filename: 'myfile.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2 },
+                    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+                };
+                html2pdf().from(invoice).set(opt).save();
+            
+    }
+   </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+            font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: .8125rem;
+            font-weight: 400;
+            line-height: 1.5385;
+            color: #333;
+            text-align: left;
+            background-color: #eee
+        }
+        
+        .mt-50 {
+            margin-top: 50px
+        }
+        
+        .mb-50 {
+            margin-bottom: 50px
+        }
+        
+        .card {
+            position: relative;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(0, 0, 0, .125);
+            border-radius: .1875rem
+        }
+        
+        .card-img-actions {
+            position: relative
+        }
+        
+        .card-body {
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            padding: 1.25rem;
+            text-align: center
+        }
+        
+        .card-title {
+            margin-top: 10px;
+            font-size: 17px
+        }
+        
+        .invoice-color {
+            color: red !important
+        }
+        
+        .card-header {
+            padding: .9375rem 1.25rem;
+            margin-bottom: 0;
+            background-color: rgba(0, 0, 0, .02);
+            border-bottom: 1px solid rgba(0, 0, 0, .125)
+        }
+        
+        a {
+            text-decoration: none !important
+        }
+        
+        .btn-light {
+            color: #333;
+            background-color: #fafafa;
+            border-color: #ddd
+        }
+        
+        .header-elements-inline {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap
+        }
+        
+        @media (min-width: 768px) {
+            .wmin-md-400 {
+                min-width: 400px !important
+            }
+        }
+        
+        .btn-primary {
+            color: #fff;
+            background-color: #2196f3
+        }
+        
+        .btn-labeled>b {
+            position: absolute;
+            top: -1px;
+            background-color: blue;
+            display: block;
+            line-height: 1;
+            padding: .62503rem
+        }
+        .border-wrap{
+            border: 1px solid #000;
+            border-radius: 10px; 
+            height: 50px;
+        }
+        .height{
+            height: auto;
+        }
+        .h10{
+            height: 1062px;
+        }
+        .text{
+            text-transform: capitalize;
+            font-size: 12px;
+        }
+        .text-label{
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .section{
+            width: 80%;
+            margin-left: 10%;
+        }
+        .mt{
+            margin-top: 50px;
+        }
+        h3{
+            text-decoration: underline;
+        }
+        .top-right-img{
+            background-repeat: no-repeat;
+            margin-left: 30%;
+            width: -50%;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center mt-50 mb-50">
+        <div class="row">
+          
+            <div class="col-md-12">
+                <div  id="invoice">
+                  
+                        <!-- Start Top Section -->
+                        <div class="section">
+                            <h1 style="text-align: center;">DOCTOR'S NOTE</h1>
+                        </div>
+                        <hr style="height: 10px;background-color: #10163a;">
+                        
+                        <div class="section">
+                            <div class="mt"></div>
+                            <table class="row" cellpadding="12" cellspacing="0">
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;">Name</td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;">Domeniga Filyakov</td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;">Gender</td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;">Male</td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;">Email</td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;">anicolao@example.com </td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;">Age</td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;">25</td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;">Phone</td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;">(3) 220-5206</td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                </tr>
+                                <hr style="border: 2px solid #10163a; position:relative; top:170px; right:26px">
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                </tr>
+                               
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;">Appointment Date</td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;">11/11/1975</td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;">Appointment Time</td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;">04:08:00</td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                </tr>
+                                <hr style="border: 2px solid #10163a; position:relative; top:226px;; right:26px">
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                </tr>
+                            </table>
+                            <table class="row" cellpadding="12" cellspacing="0">
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 100%; padding: 5px;">Medical Diagnosis</td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" style="width: 100%;padding: 5px;">This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note.</td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 100%; padding: 5px;">Description of the diagnosis</td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" style="width: 100%;padding: 5px;">This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note.</td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 100%; padding: 5px;">Medical Advice/Prescription</td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" style="width: 100%;padding: 5px;">This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note. This is testing note.</td>
+                                </tr>
+                            </table> 
+                            <table class="row" cellpadding="12" cellspacing="0">
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text-label" style="width: 25%; padding: 5px;"></td>
+                                    <td valign="top" class="text" style="width: 25%; padding: 5px;"></td>
+                                </tr>
+                            </table>
+                            <table class="row" cellpadding="12" cellspacing="0">
+                                <tr>
+                                    <td valign="top" style="width: 25%;padding: 5px;">
+                                        <img src="image/dd.png" width="150" height="150">
+                                    </td>
+                                    <td valign="top" style="width: 25%;padding: 5px;"></td>
+                                    <td valign="top" style="width: 25%;padding: 5px;"></td>
+                                    <td valign="top" style="width: 25%;padding: 5px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" style="width: 25%;padding: 5px;">
+                                        3670 West For Drive,Hallandale Beach, FL, 33009</td>
+                                    <td valign="top" style="width: 25%;padding: 5px;"></td>
+                                    <td valign="top" style="width: 25%;padding: 5px;"></td>
+                                    <td valign="top" style="width: 25%;padding: 5px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" style="width: 25%;padding: 5px;">
+                                        (123) 1234567
+                                    </td>
+                                    <td valign="top" style="width: 25%;padding: 5px;"></td>
+                                    <td valign="top" style="width: 25%;padding: 5px;"></td>
+                                    <td valign="top" style="width: 25%;padding: 5px;"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" style="width: 25%;padding: 5px;">
+                                        www.abcgenhospital.com
+                                    </td>
+                                    <td valign="top" style="width: 25%;padding: 5px;"></td>
+                                    <td valign="top" style="width: 25%;padding: 5px;"></td>
+                                    <td valign="top" style="width: 25%;padding: 5px;"></td>
+                                </tr>
+                            </table> 
+                        </div>
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
